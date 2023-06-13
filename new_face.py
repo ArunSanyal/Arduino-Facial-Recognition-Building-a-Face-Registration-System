@@ -52,7 +52,10 @@ while True:
             if key == ord('s'):
                 # Save the face to the dataset
                 registered_faces.append(face)
-                img_name='register_new/registered_face_'+ str(i)+'.jpg'
+                #img_name='register_new/registered_face_'+ str(i)+'.jpg'
+                admin=input('enter the name ')
+                img_name='register_new/'+admin+'.jpg'
+
                 cv2.imwrite(img_name, face)
                 i=i+1
 

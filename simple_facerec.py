@@ -3,6 +3,8 @@ import cv2
 import os
 import glob
 import numpy as np
+import time
+
 
 class SimpleFacerec:
     def __init__(self):
@@ -63,6 +65,10 @@ class SimpleFacerec:
             face_distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
             best_match_index = np.argmin(face_distances)
             if matches[best_match_index]:
+            
+                #electromagnet door off()
+                #delay(3)
+                ##electromagnet door on()
                 name = self.known_face_names[best_match_index]
             face_names.append(name)
 
